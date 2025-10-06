@@ -1,0 +1,135 @@
+# ===============================================
+# GITIGNORE GLOBAL - APENAS O ESSENCIAL
+# Autor: Maikon | Data: Outubro 2025
+# 
+# REGRA: Apenas arquivos que NUNCA devem ir para qualquer projeto
+# ===============================================
+
+# ===============================================
+# 🍎 macOS - Arquivos de Sistema
+# ===============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+.localized
+
+# ===============================================
+# 🪟 Windows - Arquivos de Sistema
+# ===============================================
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ===============================================
+# 🐧 Linux - Arquivos de Sistema
+# ===============================================
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ===============================================
+# 💻 Editores e IDEs - Configurações Pessoais
+# ===============================================
+
+# VS Code - Configurações pessoais
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+.vscode/*.code-workspace
+
+# Cursor IDE
+.cursor/
+
+# JetBrains IDEs - Configurações pessoais
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Vim - Arquivos temporários
+*.swp
+*.swo
+*~
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Atom
+.atom/
+
+# ===============================================
+# 🔐 Segurança - Secrets e Chaves
+# ===============================================
+
+# Environment files (SEGURANÇA!)
+.env
+.env.*
+
+# Arquivos de configuração sensíveis
+secrets.json
+config.json
+credentials.json
+
+# Chaves privadas
+*.key
+*.pem
+*.p12
+*.pfx
+id_rsa
+id_rsa.pub
+*.rsa
+
+# Certificados
+*.crt
+*.cer
+*.der
+
+# ===============================================
+# 📁 Arquivos de Backup e Temporários
+# ===============================================
+
+# Backups automáticos
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+*.tmp
+*.temp
+
+# Logs do sistema
+*.log
+logs/
+
+# ===============================================
+# 📦 Package Managers - Lock Files
+# ===============================================
+
+# Node.js - Lock files (específicos do projeto)
+package-lock.json
+yarn.lock
+
+# Python - Lock files
+poetry.lock
+Pipfile.lock
+
+# ===============================================
+# 📊 Cache e Build - Temporários
+# ===============================================
+
+# Cache geral
+.cache/
+.tmp/
+.temp/
+
+# Build artifacts genéricos
+dist/
+build/
+out/

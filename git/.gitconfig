@@ -1,0 +1,80 @@
+[user]
+    # Configure com suas informações
+    name = Maikon
+    email = your-email@example.com
+
+[core]
+    editor = vim
+    autocrlf = false
+    ignorecase = false
+    excludesfile = ~/.gitignore_global
+    preloadindex = true
+    fscache = true
+    fsmonitor = true
+
+[init]
+    defaultBranch = main
+
+[pull]
+    rebase = false
+
+[push]
+    default = simple
+
+[alias]
+    # Aliases básicos
+    st = status
+    co = checkout
+    br = branch
+    ci = commit
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    undo = reset HEAD~1
+    amend = commit --amend --no-edit
+    
+    # Aliases avançados
+    graph = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %s %C(green)(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all
+    lg = log --oneline --graph --decorate
+    ll = log --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %s %C(green)(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    cleanup = !git branch --merged | grep -v main | grep -v master | xargs -n 1 git branch -d
+    url = !git remote -v | grep origin | grep push | awk '{print $2}' | head -1
+    stash = stash push -m
+    pop = stash pop
+    
+    # Shortcuts para workflow rápido
+    a = add -A
+    c = commit
+    s = status --short
+    p = push
+    pl = pull
+
+[color]
+    ui = true
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+[credential]
+    helper = osxkeychain
+
+[merge]
+    tool = vimdiff
+
+[diff]
+    tool = vimdiff
+
+[init]
+    templateDir = ~/.git_template
